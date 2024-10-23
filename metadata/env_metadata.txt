@@ -1,4 +1,4 @@
-This “env_metadata” file was most recently updated on 2023-08-25 by Marney Pratt
+This “env_metadata” file was most recently updated on 2024-10-23 by Marney Pratt
 
 
 -------------------
@@ -8,7 +8,7 @@ GENERAL INFORMATION
 
 1. Title of Dataset 
 
-Mill River Water Quality and Weather Data for 2018-2023
+Mill River Water Quality and Weather Data for 2018-2024
 
 
 2. Author Information
@@ -24,7 +24,7 @@ Mill River Water Quality and Weather Data for 2018-2023
 
 3. Date of data collection (single date, range, approximate date) <dates in format YYYY-MM>
 
-2018-05 to 2023-06
+2018-05 to 2024-06
 
 
 4. Geographic location of data collection (where was data collected?): 
@@ -55,12 +55,12 @@ No restrictions other than proper citation/attribution
 
 2. Recommended citation for this metadata text file:
 
-Pratt, MC.  2023.  Mill River environmental data metadata for 2018-2023.  
+Pratt, MC.  2024.  Mill River environmental data metadata for 2018-2024.  
 Smith College, Northampton, MA.
 
 3. Recommended citation for the data:
 
-Pratt, MC.  2023.  Mill River environmental data for 2018-2023.  
+Pratt, MC.  2024.  Mill River environmental data for 2018-2024.  
 Smith College, Northampton, MA.
 
 

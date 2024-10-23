@@ -1,4 +1,4 @@
-This “master.taxa_metadata” file was most recently updated on 2023-08-25 by Marney Pratt
+This “master.taxa_metadata” file was most recently updated on 2024-08-25 by Marney Pratt
 
 
 -------------------
@@ -32,11 +32,11 @@ No restrictions other than proper citation/attribution
 
 2. Recommended citation for this metadata text file:
 
-Pratt, MC.  2023.  Mill River macroinvertebrate master taxonomic metadata.  Smith College, Northampton, MA.
+Pratt, MC.  2024.  Mill River macroinvertebrate master taxonomic metadata.  Smith College, Northampton, MA.
 
 3. Recommended citation for the data:
 
-Pratt, MC.  2023.  Mill River macroinvertebrate master taxonomic.  Smith College, Northampton, MA.
+Pratt, MC.  2024.  Mill River macroinvertebrate master taxonomic.  Smith College, Northampton, MA.
 
 
 
