@@ -2,7 +2,7 @@
 title: "macro_analysis_Pratt"
 subtitle: "BIO 131 Project Data Analysis"
 author: "Marney Pratt"
-date: "March 25, 2024"
+date: "October 23, 2024"
 format: 
   html:
     code-overflow: wrap
@@ -21,9 +21,9 @@ Keep all of your analysis in this same .qmd file and keep all the associated fil
 #| warning: false
 
 library(tidyverse) ## for readr, dplyr, ggplot2
-#library(vegan) ## for calculating diversity measures (you can remove this if you are not calculating diversity measures)
 library(ggbeeswarm) ## for jittering points (you can remove this is you did not use a dotplotv)
 library(flextable) ## for making formatted tables that can be pasted into Word or Google Docs
+library(ggpubr) ## for making QQ-plots
 
 ```
 
