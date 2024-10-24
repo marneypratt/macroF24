@@ -20,7 +20,8 @@ Keep all of your analysis in this same .qmd file and keep all the associated fil
 #| message: false
 #| warning: false
 
-library(tidyverse) ## for readr, dplyr, ggplot2
+suppressPackageStartupMessages(
+  library(tidyverse)) ## for readr, dplyr, ggplot2
 library(ggbeeswarm) ## for jittering points (you can remove this is you did not use a dotplotv)
 library(flextable) ## for making formatted tables that can be pasted into Word or Google Docs
 library(ggpubr) ## for making QQ-plots
@@ -46,7 +47,7 @@ Copy and paste the code you need into the chunk below (Do **NOT** run the code d
 
 Find the code you need to prepare or "wrangle" your data to make any calculations needed and combine any datasets you need to combine by looking in the "data_wrangling" folder within the "script_templates" folder. Copy and paste the code you need in the chunk below.
 
-Note, once you have completed this code chunk, you should have a new data frame that has ONE value per sampleID (each sampleID represents a microhabitat sampled on a particular day). You will then use this new data frame going forward.
+Note, once you have completed this code chunk, you should have a new data frame called my.df that has ONE value per sampleID (each sampleID represents a microhabitat sampled on a particular day). You will then use this new data frame going forward.
 
 ```{r}
 #| label: data wrangling
@@ -59,7 +60,9 @@ Note, once you have completed this code chunk, you should have a new data frame 
 
 ## Summary Table of Sampling Effort
 
-Make a table of the data that you used in your analysis (how many samples and how much area was sampled in each of the groups) to include in the Data Analysis Methods section of your paper. Go to the "data_description" script templates and select the correct version of the 'sample_table' script based on which factors you are using and paste that code below.
+Make a table of the data that you used in your analysis (how many samples and how much area was sampled in each of the groups) to include in the Data Analysis Methods section of your presentation. Go to the "data_description" script templates then look in the folder called "sample_table" and select the correct version of the 'sample_table' script based on which factors you are using and paste that code below.
+
+If you have no factors included, then use the 'sample_table_year.R' script
 
 ```{r}
 #| label: tbl-sample-table
