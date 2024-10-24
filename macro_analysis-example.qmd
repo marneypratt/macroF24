@@ -20,7 +20,8 @@ Keep all of your analysis in this same .qmd file and keep all the associated fil
 #| message: false
 #| warning: false
 
-library(tidyverse) ## for readr, dplyr, ggplot2
+suppressPackageStartupMessages(
+  library(tidyverse)) ## for readr, dplyr, ggplot2
 library(ggbeeswarm) ## for jittering points (you can remove this is you did not use a dotplotv)
 library(flextable) ## for making formatted tables that can be pasted into Word or Google Docs
 library(ggpubr) ## for making QQ-plots
@@ -72,7 +73,7 @@ master.taxa <- read_csv("data/master.taxa.csv",
 
 Find the code you need to prepare or "wrangle" your data to make any calculations needed and combine any datasets you need to combine by looking in the "data_wrangling" folder within the "script_templates" folder. Copy and paste the code you need in the chunk below.
 
-Note, once you have completed this code chunk, you should have a new data frame that has ONE value per sampleID. You will then use this new data frame going forward.
+Note, once you have completed this code chunk, you should have a new data frame called my.df that has ONE value per sampleID. You will then use this new data frame going forward.
 
 ```{r}
 #| label: data wrangling
@@ -128,7 +129,9 @@ my.df <- left_join(density.df, variables) |>
 
 ## Summary Table of Sampling Effort
 
-Make a table of the data that you used in your analysis (how many samples and how much area was sampled in each of the groups) to include in the Data Analysis Methods section of your paper. Go to the "data_description" script templates and select the correct version of the 'sample_table' script based on which factors you are using and paste that code below.
+Make a table of the data that you used in your analysis (how many samples and how much area was sampled in each of the groups) to include in the Data Analysis Methods section of your presentation. Go to the "data_description" script templates then look in the folder called "sample_table" and select the correct version of the 'sample_table' script based on which factors you are using and paste that code below.
+
+If you have no factors included, then use the 'sample_table_year.R' script
 
 ```{r}
 #| label: tbl-sample-table
@@ -195,13 +198,53 @@ ft
 ```
 
 
-## Descriptive Statistics
 
-Use the template code below to calculate the descriptive statistics for your variable of interest. 
+## Data Exploration and Description
 
-The output of this code should NOT all be reported in your paper. Decide which (if any) of the descriptive statistics you should report and make sure to round the values. 
+Start by exploring the nature of each of your continuous variables to see if it is normally distributed and how you might want to summarize it. 
 
-Descriptive statistics can be reported in the text of the results (see this [example results section](https://docs.google.com/document/d/1vwyOSmhZzTuIfAEbpeiv3yCsU1UMZDsTXgnbE80nPTU/edit?usp=sharing)) if relatively simple, or you can make a formatted table of just the necessary, rounded values to include in your paper.
+
+Use a QQ plot to see if each continuous variable is normally distributed. Since most groups have at least two continuous variables, there is code for each in the chunk below. If you only have one continuous variable, just delete the second one.
+
+The `color` and `facet.by` functions splits the plots up by any factors you have. If you have no factors, then delete one or both of those lines and the comma from the above line.
+
+```{r}
+#| label: Independent variable QQ plots 
+
+#make a QQ plot for each independent variable that is continuous
+ggpubr::ggqqplot(
+  data = my.df,         #put the data frame name here 
+  "DO",                 #put the continuous variable name here
+  color = "location",   #put one factor here (remove if no factors)
+  facet.by = "season"   #put another factor here (remove if no factors)
+  )  
+
+```
+
+```{r}
+#| label: Dependent variable QQ plots 
+
+#make a QQ plot for each independent variable that is continuous
+ggpubr::ggqqplot(
+  data = my.df,         #put the data frame name here 
+  "DO",                 #put the continuous variable name here
+  color = "location",   #put one factor here (remove if no factors)
+  facet.by = "season"   #put another factor here (remove if no factors)
+  )  
+
+
+#make a QQ plot for each dependent variable that is continuous
+ggpubr::ggqqplot(
+  data = my.df,         #put the data frame name here 
+  "density",                 #put the continuous variable name here
+  color = "location",   #put one factor here (remove if no factors)
+  facet.by = "season"   #put another factor here (remove if no factors)
+  )  
+
+```
+
+
+
 
 ```{r}
 #| label: tbl-descriptive-stats-density
