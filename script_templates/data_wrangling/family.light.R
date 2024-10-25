@@ -59,7 +59,7 @@ variables <- macros |>
 my.df <- left_join(macro.joined, variables) |> 
   
   #collapse microhabitat factor into 2 light categories
-  mutate(microhab.light = fct_collapse
+  mutate(light.levels = fct_collapse
          (microhabitat,
            high = c("DM", "DSP", "UM", "USU"),
            low = c("DSR", "DFR", "DSH", "USR", "UFR", "USH"))) |> 
