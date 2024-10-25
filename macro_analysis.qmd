@@ -22,8 +22,8 @@ Keep all of your analysis in this same .qmd file and keep all the associated fil
 
 suppressPackageStartupMessages(
   library(tidyverse)) ## for readr, dplyr, ggplot2
-library(ggbeeswarm) ## for jittering points (you can remove this is you did not use a dotplotv)
-library(flextable) ## for making formatted tables that can be pasted into Word or Google Docs
+library(ggbeeswarm) ## for jittering points (you can remove this is you did not use a dotplot)
+library(flextable) ## for making formatted tables that can be pasted into PowerPoint or Google Slides
 library(ggpubr) ## for making QQ-plots
 
 ```
