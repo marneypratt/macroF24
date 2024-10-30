@@ -4,9 +4,9 @@ ggplot(
   data = ___, #put the data frame name here
   
   #set the aesthetics
-  aes(x = ___,       #put the factor on the x-axis
-      y = ___,       #continuous variable = y
-      color = ___)) + #put the same factor as on x-axis 
+  aes(x = ___,       #independent variable = x
+      y = ___,       #dependent variable = y
+      color = ___)) + #factor 
   
   #add points
   geom_point(size = 3) +    #sets the size of the points
