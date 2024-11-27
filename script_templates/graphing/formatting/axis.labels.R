@@ -19,3 +19,5 @@ xlab(~paste("Conductivity"," ", "(" ,mu, "S cm"^-1, ")")) +
 xlab("Monthly Precipitation (mm)") +
   
 xlab("Monthly Accummulated Degree Days") +
+  
+xlab(bquote("River Discharge ("~f^3*"/s)"))
